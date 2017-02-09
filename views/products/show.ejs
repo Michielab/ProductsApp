@@ -1,0 +1,15 @@
+<h1><%= name %></h1>
+<img src="<%= imageUrl %>">
+<h3>Price: <span>$<%= price %></span></h3>
+<p><%= description %></p>
+
+<h1>Comments</h1>
+<h4><a href="/products/<%= _id %>/reviews/new">POST COMMENT</a></h4>
+<ul>
+  <% reviews.forEach((review) => { %>
+    <li>
+      <p><%= review.content %></p>
+      <strong><%= review.author %></strong>
+    </li>
+  <%  }); %>
+</ul>
